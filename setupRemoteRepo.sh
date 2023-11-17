@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 while getopts "r:" opt; do
   case $opt in
     r) repo_name="$OPTARG"
@@ -10,6 +9,11 @@ while getopts "r:" opt; do
   esac
 done
 
-./gh/gh auth login
+cd "$repo_name"
 
-./gh/gh repo create $repo_name --private
+# gh auth
+gh repo create nijibox/$repo_name --private
+
+git remote add origin "https://github.com/nijibox/$repo_name.git"
+
+git push -u origin main

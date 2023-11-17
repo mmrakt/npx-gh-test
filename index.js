@@ -77,7 +77,7 @@ cli
     process.on("close", (code) => {
       if (code === 0) {
         console.log(
-          `${COMPLETE_MESSAGE_PREFIX}\n\nリモートリポジトリURL: https://github.com/mmrakt/${args}.git`
+          `${COMPLETE_MESSAGE_PREFIX}\n\nリモートリポジトリURL: https://github.com/nijibox/${args}.git`
         );
       } else {
         console.log(`エラーが発生しました。\n\n終了ステータス:  ${code}`);
