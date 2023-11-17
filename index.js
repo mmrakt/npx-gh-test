@@ -2,8 +2,9 @@
 
 const path = require("path");
 const cac = require("cac");
-const { exec, spawn } = require("child_process");
+const { spawn } = require("child_process");
 const cli = cac("lp-environment-builder");
+const readline = require("readline");
 
 const COMPLETE_MESSAGE_PREFIX = "\n🔥 作成が完了しました";
 
@@ -61,7 +62,9 @@ cli
     //   console.error(`ERROR: ${stderr}`);
     // });
 
-    const process = spawn("bash", ["./setupRemoteRepo.sh", "-r", args], {});
+    const process = spawn("bash", ["./setupRemoteRepo.sh", "-r", args], {
+      stdio: "inherit",
+    });
 
     process.on("error", (err) => {
       console.error(`ERROR: ${err.message}`);

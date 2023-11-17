@@ -2,4 +2,4 @@
 
 ./gh/gh auth login
 
-./gh/gh repo create hogehoge
+./gh/gh repo create hogehoge --private
