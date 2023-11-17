@@ -70,9 +70,9 @@ cli
       console.error(`ERROR: ${err.message}`);
     });
 
-    process.stderr.on("data", function (data) {
-      console.log("stdout: " + data);
-    });
+    // process.stderr.on("data", function (data) {
+    //   console.log("stdout: " + data);
+    // });
 
     process.on("close", (code) => {
       if (code === 0) {
