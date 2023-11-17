@@ -1,0 +1,15 @@
+{
+  "name": "npx-gh-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "sh setupRemoteRepo.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cac": "^6.7.14"
+  }
+}
